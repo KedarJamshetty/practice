@@ -1,0 +1,1436 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style type="text/css">
+
+.font_head {
+font-family: Roboto,serif;
+font-size: 2.6em;
+font-weight: 100;
+line-height: 1em;
+font-style: italic;
+}
+
+.btn_register{
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left:40px;
+padding-right:40px;
+border: 1px solid #a8a8a8;
+display:inline-block;
+border-radius: 20px;
+text-align:center;
+cursor:pointer;
+background-color:#4682B4;
+color:white;
+}
+.font{
+font-size: 15px;
+}
+
+.btn_search{
+padding-bottom: 5px;
+padding-top: 5px;
+border: 1px solid #a8a8a8;
+display:inline-block;
+border-radius: 20px;
+text-align:center;
+cursor:pointer;
+background-color:black;
+color:white;
+width: 150px;
+}
+
+
+.main-container{
+background-color: #F6F6F6;    
+padding-top: 20px; 
+margin: auto;
+width: 100%;
+}
+
+.leftinput{
+/*width: 100%;*/
+width: 200px;
+height:50px;
+position: relative;
+/*border-style: groove;*/
+border: 1px groove;
+border-right-width:1px;
+border-top-width:2px;
+border-bottom-width:2px;
+border-left-width:2px;
+border-radius: 25px 0px 0px 25px;
+text-align: center;
+padding:15px;
+outline: 0;
+}
+
+.centerinput{
+outline: 0;
+height:40px;
+padding:0px;
+margin: 0px;
+margin-left: 0px;
+border-style: groove;
+}
+
+.rightinput{
+width: 200px;
+height:50px;
+border: 1px groove;
+/*border-style: groove;*/
+border-right-width:2px;
+border-top-width:2px;
+border-bottom-width:2px;
+border-left-width:1px;
+border-radius: 0px 25px 25px 0px;
+background-color: white;
+text-align: center;
+outline: 0;
+margin-bottom: 15px;
+}
+
+.drpdwn{
+height:40px;
+border: 2px groove;
+margin: 0px;
+border-radius: 24px 24px 24px 24px;
+width: 260px;
+background-color: white;
+outline: 0;
+margin-bottom: 15px;
+
+}
+.panel{
+width: 85%;
+}
+#welcome_container{
+align-content: center;
+text-align: center;
+
+}
+.leftinput_wrapper{
+text-align: right;
+padding: 0px;
+position: relative;
+}
+.rightinput_wrapper{
+text-align: left;
+padding: 0px;
+position: relative;
+}
+
+
+.leftinput:focus ~ .floating-label1,
+.leftinput:not(:focus):valid ~ .floating-label1{
+top: 3px;
+right: 80px;
+font-size: 10px;
+opacity: 0.7;
+color:green;
+}
+
+
+
+.floating-label1 {
+position: absolute;
+pointer-events: none;
+right: 80px;
+top: 15px;
+text-align: center;
+transition: 0.2s ease all;
+opacity: 1.2;
+color:purple;
+}
+
+.rightinput:focus ~ .floating-label2,
+.rightinput:not(:focus):valid ~ .floating-label2{
+top: 3px;
+left: 60px;
+font-size: 10px;
+opacity: 0.7;
+color:green;
+}
+
+
+
+.floating-label2 {
+position: absolute;
+pointer-events: none;
+left: 60px;
+top: 15px;
+text-align: center;
+transition: 0.2s ease all;
+opacity: 1.2;
+color:purple;
+}
+
+
+.contact_info{
+padding-bottom: 0px;
+padding-top: 0px;
+font-size: 8px;
+}  
+
+.material-icons{
+font-size: 16px;
+
+
+}
+.dropdown-menu {
+padding: 0px;
+margin: 0px;
+}
+.user{
+padding-right: 8px;
+}
+.btn-bg{
+background-color: white;
+width: 200px;
+height:40px;
+}
+.checkbox-align{
+padding-left: 20px;
+}
+.main-container{
+background-color: #F6F6F6;    
+padding-top: 20px; 
+margin: auto;
+
+}
+a{
+text-decoration: none;
+}
+.search_align{
+padding-left: 75px;
+}
+.person_mail{
+padding-right: 5px;
+}
+.person_mobile{
+padding-right: 5px;
+}
+.person_name{
+padding-right: 20px;
+}
+.icon-style{
+padding-left: 10px;
+}
+
+.mob-btn-search{
+padding-right: 60px;
+}
+
+
+.mob_btn_register{
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left:10px;
+padding-right:10px;
+border: 1px solid #a8a8a8;
+display:inline-block;
+border-radius: 20px;
+text-align:center;
+cursor:pointer;
+background-color:#4682B4;
+color:white;
+}
+.mob_label{
+padding-left: 8px;
+}
+
+.info_left{
+text-align: left;
+padding-left: 15px;
+}
+
+
+.information-right{
+text-align:right;
+}
+.info_center{
+text-align: center;
+}
+
+.mob_label{
+padding-left: 8px;
+}
+.comp_name_label{
+padding: 0px; font-size: 15px; vertical-align: middle;padding-left: 
+
+}
+.comp_city{
+padding:5px;
+}
+.truck_label{
+padding-left:5px;
+}
+.label_routes{
+padding-left: 5px;
+}
+.desk_comp_width{
+  float: left; 
+  max-width: 150px;
+  padding-left: 10px;
+}
+.desk_comp{
+  padding-right: 0px; 
+  float: left; 
+  max-width: 250px; 
+  padding-left: 10px;
+}
+.location_comp{
+  padding-left: 10px;
+}
+.truck_align{
+  padding-left: 5px; 
+  font-size: 15px; 
+  vertical-align:top;
+  margin-top: 2px;
+}
+.user_align{
+  font-size: 15px; 
+  vertical-align: text-top;
+  margin-top: 4px;
+}
+.flat_add{
+  float: left; 
+  padding-left: 10px;
+}
+@media only screen
+}
+and (min-width: 450px)
+and (max-width: 767px){
+
+.desk_comp_width{
+  float: left; 
+  max-width: 150px;
+  padding-left: 10px;
+}
+
+.desk_comp{
+  padding-right: 0px; 
+  float: left; 
+  max-width: 250px; 
+  padding-left: 15px;
+}
+
+.info_center{
+text-align: left;
+padding-left: 10px;
+}
+.information-right{
+text-align:left;
+padding-left: 10px;
+}
+.bodyType{
+border-radius: 24px 24px 24px 24px;
+border-style: groove;
+border-left-width: 2px;
+width:200px;
+height:40px;
+align-content: left;
+}
+
+.panel{
+width: 60%;
+}
+
+.floating-label {
+position: absolute;
+pointer-events: none;
+left: 50px;
+top: 10px;
+transition: 0.2s ease all;
+opacity: 1.26
+padding-left: 10px;
+color:purple;
+}
+
+.input:focus ~ .floating-label,
+.input:not(:focus):valid ~ .floating-label{
+top: 3px;
+left: 20px;
+font-size: 10px;
+opacity: 0.7;
+color:green;
+}
+
+
+.search_align{
+
+padding-right: 80px;
+}
+.mobi_width{
+width: 60%;
+align-content: center;
+}
+
+
+}
+@media only screen
+and (min-width: 450px)
+and (max-width: 767px){
+
+.info_center{
+text-align: left;
+padding-left: 10px;
+}
+.information-right{
+text-align:left;
+padding-left: 10px;
+}
+.panel{
+width: 380px;
+}
+}
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 500px){
+
+.mob_comp_name{
+  max-width: 190px;
+  float: left;
+}
+
+.mobi_width{
+width: 85%;
+align-content: center;
+}
+
+
+
+.info_center{
+text-align: left;
+padding-left: 4px;
+}
+.search_align{
+padding-left: 0px;
+}
+
+.panel{
+width: 85%;
+}
+.cont_info{
+text-align: right;
+
+}
+
+.cont_data{
+text-align: left;
+
+}
+.information-right{
+text-align:right;
+padding-right: 0px;
+}
+
+.icon-style{
+padding-left: 1px;
+}
+
+.person_name{
+padding-left: 5px;
+}
+.mob_icon-style{
+padding-left: 20px;
+}
+
+.floating-label {
+position: absolute;
+pointer-events: none;
+left: 50px;
+top: 10px;
+transition: 0.2s ease all;
+opacity: 1.26
+padding-left: 10px;
+color:purple;
+}
+
+.input:focus ~ .floating-label,
+.input:not(:focus):valid ~ .floating-label{
+top: 3px;
+left: 20px;
+font-size: 10px;
+opacity: 0.7;
+color:green;
+}
+
+.btn_drpdown{
+
+}
+.btn_search{
+padding-bottom: 5px;
+padding-top: 5px;
+border: 1px solid #a8a8a8;
+display:inline-block;
+border-radius: 20px;
+text-align:center;
+cursor:pointer;
+background-color:black;
+color:white;
+width: 150px;
+}
+
+.bodyType{
+border-radius: 24px 24px 24px 24px;
+border-left-width: 2px;
+border-style: groove;
+width:200px;
+height:40px;
+align-content: left;
+}
+
+
+}
+
+</style>
+</head>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+<span class="sr-only"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+
+
+<div class="nav ul li">
+<div class="navbar-header"><br/>
+<a href="index.php"><img src="logo2.png"
+class="img-responsive" alt="Responsive image" style="width: 10%;"></a>
+<a class="navbar-brand" href="#">Simplified Logistics Solutions</a>
+</div>
+
+
+<div class="navbar-collapse collapse" id="navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right "><br/>
+<li><a href="#">What is SLS?</a></li>
+<li><a href="#">Registration</a></li>
+<ul class="dropdown-menu"><span>
+<li role="presentation"><a href="franchisee.php">Franchisee</a>
+</span></li>
+</ul>
+</span>
+</li>
+<li><a href="#">Careers</a></li>
+<li role="presentation"><a href="contact.php">Contact Us</a> </span></li>
+<?php
+if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && $state == 2){
+?>
+<li class="divider-vertical"></span></li>
+<li role="presentation" class="dropdown"><a
+class="dropdown-toggle" data-toggle="dropdown" href="#"
+role="button" aria-haspopup="true" aria-expanded="false"> My
+Account <b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li role="presentation"><a href="profile.php">Profile</a> </span></li>
+<li role="presentation"><a href="logout.php">Logout</a> </span></li>
+<?php }
+else if($state == 1){?>
+<li class="divider-vertical"></span></li>
+<li role="presentation"><a href="logout.php">Logout</a> </span></li>
+
+<?php
+}
+?>
+</ul>
+</li>  
+</ul>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+<body>
+<div class="container" id="welcome_container">
+  <div class="row" style="margin-bottom: 5%;">
+    <div style="position: absolute; right: 10%;margin-top: 1%;" class="hidden-sm hidden-xs">
+      <div class="col-xs-offset-4  btn_register">
+        Register   
+      </div>   
+    </div>
+    <div class="hidden-md hidden-lg" align="center">
+      <div class="btn_register">
+        Register   
+      </div>   
+    </div>
+  </div>
+  <div class="col-sm-12" align="center" style="margin-bottom: 2%">
+    <!--<h3 class="hidden-xs hidden-sm">Welcome to Simplified Logistic Solutions</h3>-->
+    <h3 class="font_head">ONE  STOP  SHOP  TO  SEARCH  TRANSPORTER</h3>
+  </div>
+</div><br/>
+<div class="container font">
+  <div class="row" style="position: relative;">
+    <div class="leftinput_wrapper col-xs-6 col-md-6 col-sm-6 col-lg-6" align="right" style="padding: 0px; position: relative;">
+      <input type="text" class="leftinput" placeholder="" name=""  id="src" required="" >
+      <span class="floating-label1">Source</span>	
+    </div>
+    <div class="rightinput_wrapper col-xs-6 col-md-6 col-sm-6 col-lg-6" align="left" style="padding: 0px; position: relative;">
+      <input type="text" class="rightinput" placeholder="" name="" required="" >
+      <span class="floating-label2">Destination</span>
+    </div>
+  </div>
+  <div class="row hidden-xs" align="center">
+    <div class="dropdown">
+      <button type="dropdown" class="btn-bg dropdown-toggle bodyType drpdwn btn_drpdown"   data-toggle="dropdown" placeholder="">
+      <span id="filter_text">BodyType</span>
+      <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu checkbox-align" style="left: 45%;">
+        <div class="checkbox">
+          <button id='clear_filter' class="btn-link">Clear All Filters</button><br>
+          <label><input type="checkbox" value="full">Full Load</label><br/>
+          <label><input type="checkbox" value="partial">Partial Load</label><br/>
+          <label><input type="checkbox" value="lorry">Lorry</label><br/>
+          <label><input type="checkbox" value="trailor">Trailor</label><br/>
+          <label><input type="checkbox" value="odc">ODC</label><br/>
+          <label><input type="checkbox" value="lcv">LCV</label><br/>
+          <label><input type="checkbox" value="container">Container</label><br/>
+          <label><input type="checkbox" value="tanker">Tanker</label><br/>
+          <label><input type="checkbox" value="jcb">JCB</label>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div class="row " align="center" style="text-align: center">
+    <div id="search_btn"  class="btn_search ">Search</div>
+  </div>
+</div>
+<br/>
+<br/>
+<!-- </div>  -->
+<div class="container main-container font" align="center">
+<div class="panel panel-default data_row_wrapper" >
+<div class="panel-body">
+  <div class="row">
+    <div class="col-sm-4 col-xs-12" style="text-align: left;">
+      <div class="row" style="padding-left: 20px;">
+      <div class="desk_comp_width mob_comp_width">
+        <img src="three_buildings_light.png"><!-- Kedar change-- line num 564>-->
+      </div>
+      <div class="mob_comp_name desk_comp">
+        <span class="comp_name_label">
+          <strong>Simplified Logistic Solutions Private Limited</strong>
+        </span>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="form-group" >
+    <img src="route_light16.png">
+    <label class="label_routes truck_align">Travels to routes</label><br>
+    Haryana, Chhatisgarh, ... 
+    </div>
+    </div>
+    <div class="col-sm-4 col-xs-12" style="text-align: right;">
+       <div class="hidden-xs col-md-8 col-md-push-3 col-sm-8 col-sm-push-3 user_align">Ishan Darolia<br>& more</div>
+
+      <div class="hidden-xs col-md-2 col-md-push-2 col-sm-2 col-sm-push-2" ><img src="user_light16.png"></div>
+    
+
+    </div>
+       </div>
+       <div class="row" align="center">
+  <a href="#collpase1" data-toggle="collapse" class="expand"><img src="expand_light24.png"></a>
+  </div>
+
+<div class = "panel-collapse collapse" id='collpase1'>
+<div class="row">
+  <div class="col-md-4 col-xs-12 col-sm-4 info_left" >
+    <div class="form-group " style="padding-left: 20px;">
+      <div class="row">
+        <div class="desk_comp_width mob_comp_width">
+          <img src="address_light16.png"><!-- Kedar change-- line num 564>-->
+        </div>
+        <div class="mob_comp_name desk_comp">
+          <span class="comp_name_label ">
+           Flat No 304, Block - 3, Hill Ridge Apartment, Gach
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="location_comp">
+    <!-- <img src="address_light16.png"> -->
+    <img src="placeholder-filled-point_light16.png">
+    <span class="comp_city comp_name_label">Hyderabad,Telangana</span>
+    </div>
+      </div>
+      <div class="row">
+        <div class="location_comp">
+        <!-- <img src="palceholder-filled-point_light16.png"> -->
+        <img src="number_light16.png" >
+                <span class="comp_city comp_name_label">Number of Trucks:<span>100</span></span>
+        </div>
+      </div>.
+      </div>
+  </div>
+  <div class="col-md-4 col-xs-12 col-sm-4 info_center">
+   <div class="form-group">
+
+  <img src="three_buildings_light.png">
+  <label class="truck_label truck_align">Truck Type</label><br class="hidden-xs">
+  Open Container,LCV ...
+  </div>
+  <div class="form-group hidden-xs" >
+  <label class="label_occupation ">Occupation</label><br class="hidden-xs">
+  occupation1, occupation2, ... 
+</div>
+
+
+  </div>
+  <div class="col-md-4 col-xs-12 col-sm-4 hidden-xs information-right" style="padding-right: 30px;">
+    <div class="row contact_details">
+      <label class="hidden-lg hidden-md hidden-sm cont_data">Contact Details:</label>
+   <div class="hidden-xs col-md-8 col-md-push-3 col-sm-8 col-sm-push-3 user_align">8888888888<br>& more</div>
+
+      <div class="hidden-xs col-md-2 col-md-push-2 col-sm-2 col-sm-push-2" ><img src="telephone_light16.png"></div>
+    </div><br/>
+  <div class="row" style="padding-right: 10px;">
+      <img src="SLS_verified6.png">
+    </div>
+  </div>
+</div>
+<div class="row" align="center">
+  <a href="#collpase1" data-toggle="collapse" class="shrink"><img src="collapse_light24.png"></a>
+  </div>
+<div class="" align="center" style="margin-bottom:-1%;">
+        <span class="comp_city comp_name_label"><a href="#">www.slshub.in</a></span>
+        </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<div align="center">
+<ul class="pagination">
+<li class="active"><a href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+</ul>
+</div>
+<div class="panel panel-footer"; style="width: 100%;">
+
+<p align="center">Simplified Logistics Solutions &copy; 2016. All
+rights reserved.</p>
+
+</div>
+
+<script>
+$(document.body).on('click', '.expand', function(){
+  $(this).hide(50);
+});
+$(document.body).on('click', '.shrink', function(){
+  var parent = $(this).closest('.data_row_wrapper');
+  var expand = $(parent).find('.expand');
+  $(expand).show(500);
+});
+
+
+var src,dst,filter;
+filter = [];
+var offset = 0;
+var currentPage,totalPages;
+var src_city,src_state,dst_state;
+var pageSize,total_entries;
+var fetch_size = 10;
+var alert_shown = false;
+$( document ).ready(function() {
+geolocate();
+$('#clear_filter').on('click',function () {
+$('input:checkbox').prop('checked',false);
+$('#filter_text').text('BodyType');
+filter = [];
+console.log(filter);
+
+});
+$('input[type=checkbox]').change(
+function(){
+if (this.checked) {
+filter.push(this.value);
+addFilterText(filter);
+}
+else{
+filter.splice($.inArray(this.value,filter),1);
+addFilterText(filter);
+}
+console.log(filter);
+});
+
+$("#search_btn").on('click', function () {
+offset = 0;
+alert_shown = false;
+$('#data_container').hide();
+$('#page_nav').hide();
+$('#welcome_container').show();
+$('#data_container').empty();
+$('.numeros').remove();
+src = $('#src').val();
+dst = $('#dest').val();
+//filter = ['abc','def'];
+if (src == "") {
+alert("source can not be empty");
+}
+else if (!autocomplete1_flag) {
+alert('please choose source from the dropdown');
+}
+else if (dst == "") {
+alert("destination can not be empty");
+}
+else if (!autocomplete2_flag) {
+alert('please choose destination from the dropdown');
+}
+else {
+//        console.log('filter_final = '+ filter);
+//        $('#loader').show();
+//        clear_table('t1');
+var src_array = src.split(', ');
+//console.log(src_array);
+src_city = '';
+src_state = '';
+dst_state = dst;
+if(src_array.length == 2){
+src_city = src_array[0];
+src_state = src_array[1];
+}
+else{
+src_city = '';
+src_state = src_array[0];
+}
+$('#modal_total_header').hide();
+$('#modal_total').text('');
+$('#modal_source').text(src_array);
+$('#modal_destination').text(dst);
+$('#myModal').modal({
+backdrop: 'static',
+keyboard: false
+});
+fetchData(src_city,src_state, dst, filter,'active');
+}
+});
+
+});
+function addFilterText(filter_text_array){
+var filter_text = filter_text_array;
+if(filter_text.length == 0){
+$('#filter_text').html('BodyType');
+return;
+}
+var result = filter_text[0];
+var popover_text = '';
+if(filter_text.length > 1){
+result += ','+filter_text[1];
+}
+if(filter_text.length > 2){
+result += ' +'+(filter_text.length-2).toString();
+}
+$('#filter_text').html(result);
+}
+function add_pages(data_count){
+console.log('inside add_pages, data_count = ' + data_count);
+
+var newPages = Math.ceil(data_count / pageSize);
+console.log('new pages to be added = '+ newPages);
+var nav = '';
+for (var s=0; s<newPages; s++){
+nav += '<li class="numeros"><a href="#">'+(s+1+totalPages)+'</a></li>'
+}
+totalPages += newPages;
+console.log(nav);
+$('.pag_next').before(nav);
+
+}
+function init_paginate(){
+pageSize = 5;
+pagesCount = $(".data_row_wrapper").length;
+currentPage = 1;
+
+/////////// PREPARE NAV ///////////////
+var nav = '';
+totalPages = Math.ceil(pagesCount / pageSize);
+for (var s=0; s<totalPages; s++){
+nav += '<li class="numeros"><a href="#">'+(s+1)+'</a></li>';
+}
+$(".pag_prev").after(nav);
+$(".numeros").first().addClass("active");
+$('#index_start').text(1);
+$('#index_end').text(pageSize);
+$('#index_total').text(total_entries);
+$('#welcome_container').hide(100);
+$('#data_container').show(200);
+$('#page_nav').show(200);
+$('#myModal').modal('hide');
+//////////////////////////////////////
+}
+function showPage() {
+console.log('in show page');
+var count = 0;
+$(".data_row_wrapper").hide().each(function(n) {
+//console.log('show_page = '+ n);
+if (n >= pageSize * (currentPage - 1) && n < pageSize * currentPage){
+$(this).show();
+count++;
+}
+});
+var start = (currentPage-1)*pageSize+1;
+$('#index_start').text(start);
+$('#index_end').text(start+count-1);
+}
+function loadMoreData(){
+if(stop_fetching){
+return;
+}
+stop_fetching = true;
+fetchData(src_city,src_state,dst_state,filter,'lazy');
+}
+function fetchData(source_city,source_state,dst,filter,loading_type){
+//console.log(source_city + source_state + dst);
+window.h=$(this);
+$.ajax({
+url: "/api/search_transporters",
+data:{"size" : fetch_size,
+"offset" : offset,
+"source_city" : source_city,
+"source_state" : source_state,
+"destination" : dst,
+"filter" : filter
+},
+success: function(b) {
+//$('#ajax-loader').hide();
+//$('#loader').hide();
+if(loading_type == 'active'){
+total_entries = b.hits.total;
+$('#modal_total').text(total_entries);
+$('#modal_total_header').show(10);
+if(b.hits.total == 0){
+$('#myModal').modal('hide');
+}
+}
+
+show_data(b,loading_type);
+//console.log(b);
+//                  console.log(JSON.stringify(b.hits.hits[0]));
+
+},
+error: function (XMLHttpRequest, textStatus, errorThrown) {
+//        $('#ajax-loader').hide();
+//        $('#loader').hide();
+stop_fetching = false;
+if(loading_type == 'active')
+alert("Error Status: " + textStatus); alert("Error: " + errorThrown);
+}
+});
+}
+
+function getShortName(data) {
+//    console.log(jQuery.type(data));
+//    console.log(data.substr(0,));
+if(data.length > 35){
+var substring = data.substr(0,30);
+var result = '<span class="more-info"><a href="#" title="Company Name" data-toggle="popover" ' +
+'data-trigger="hover" data-content="'+data+'">'+substring+ ' ...</a></span>'
+return result;
+}
+else return data;
+}
+function getShortAddress(data) {
+//    console.log(jQuery.type(data));
+//    console.log(data.substr(0,));
+if(data.length > 35){
+var substring = data.substr(0,30);
+var result = '<span class="more-info"><a href="#" class="no-decoration" title="Address" data-toggle="popover" ' +
+'data-trigger="hover" data-content="'+data+'">'+substring+ ' ...</a></span>'
+return result;
+}
+else return data;
+}
+function getTruckType(truck_types) {
+var data = truck_types.join(', ');
+if(data.length > 20) {
+var substring = data.substr(0, 20);
+var result = '<span class="more-info"><a href="#" title="Truck Type" data-toggle="popover" ' +
+'data-trigger="hover" data-content="' + data + '">' + substring + '...</a></span>';
+return result;
+}
+else return data;
+}function getRoutes(routes) {
+var data = routes.join(', ');
+if(data.length > 20){
+var substring = data.substr(0,20);
+var result = '<span class="more-info"><a href="#" class="no-decoration" title="Travels to routes" data-toggle="popover" ' +
+'data-trigger="hover" data-content="'+data+'">'+substring+'...</a></span>'
+return result;
+}
+else return data;
+}
+function getWebsite(website) {
+var result = "<a target=\'_blank\' href=\'//"+website+"\'>"+website+"</a>";
+return result;
+}
+function getContactInfo(contact_info) {
+if(jQuery.type(contact_info) == 'string'){
+return contact_info;
+}
+var title = 'Contact Info';
+var i;
+var result = contact_info[0];
+
+
+if(contact_info.length > 1){
+var remaining = contact_info.length - 1;
+//console.log(contact_info);
+contact_info.shift();
+var data = contact_info.join(', ');
+result += ' '+ '<br><span class="more-info"><a href="#" data-toggle="popover" ' +
+'data-trigger="hover" data-content="'+data+'">& '+remaining+' more</a></span>'
+}
+return result;
+}
+function getEmail(email){
+var result = '<a  href="mailto:'+email+' target="_top">'+email+'</a>';
+return result;
+}
+function gen_row(data){
+var container = document.getElementById('data_container');
+var main_panel = document.createElement('div');
+var line_break = document.createElement('br');
+$(main_panel).addClass('data_row');
+var info_left_div = document.createElement('div');
+$(info_left_div).addClass('col-md-5');
+$(info_left_div).addClass('info_left');
+var info_left_div_child = document.createElement('div');
+$(info_left_div_child).addClass('form-group');
+var para = document.createElement('para');
+$(para).addClass('comp_name_label');
+/*DATA_INSERT:Add company name here*/
+$(para).html(getShortName(data.companyDetails.companyName));
+info_left_div_child.appendChild(para);
+info_left_div.appendChild(info_left_div_child);
+info_left_div_child = document.createElement('div');
+$(info_left_div_child).addClass('form-group');
+var icon = document.createElement('i');
+$(icon).addClass('material-icons');
+$(icon).html('&#xe55f;');
+info_left_div_child.appendChild(icon);
+para = document.createElement('para');
+$(para).addClass('comp_city');
+/*DATA_INSERT:Add company city,state here*/
+$(para).text(data.companyAddress.city+', '+data.companyAddress.state);
+info_left_div_child.appendChild(para);
+info_left_div.appendChild(info_left_div_child);
+info_left_div_child = document.createElement('div');
+$(info_left_div_child).addClass('form-group');
+para = document.createElement('para');
+$(para).addClass('comp_address_label');
+/*DATA_INSERT:Add company address here*/
+//      $(para).html('Flat No 304, Block - 3, Hill Ridge Apartment, Gach<span class="more-info"> ...</span>');
+$(para).html(getShortAddress(data.companyAddress.addressLine));
+info_left_div_child.appendChild(para);
+info_left_div.appendChild(info_left_div_child);
+/*left div  ends*/
+main_panel.appendChild(info_left_div);
+/*center div starts*/
+var info_center_div = document.createElement('div');
+$(info_center_div).addClass('col-md-3');
+$(info_center_div).addClass('info_center')
+var info_center_div_child = document.createElement('div');
+if(data.hasOwnProperty('vehicleType')) {
+$(info_center_div_child).addClass('form-group');
+label = document.createElement('label');
+$(label).addClass('truck_label');
+$(label).text('Truck Type');
+info_center_div_child.appendChild(label);
+//        info_center_div_child.appendChild(line_break);
+var para = document.createElement('p');
+/*DATA_INSERT:Add Truck type here*/
+$(para).html(getTruckType(data.vehicleType));
+info_center_div_child.appendChild(para);
+info_center_div.appendChild(info_center_div_child);
+}
+if(data.hasOwnProperty('specializedRoutes')) {
+info_center_div_child = document.createElement('div');
+$(info_center_div_child).addClass('form-group');
+label = document.createElement('label');
+$(label).addClass('label_routes');
+$(label).text('Travels to routes');
+info_center_div_child.appendChild(label);
+info_center_div_child.appendChild(line_break);
+var para = document.createElement('p');
+/*DATA_INSERT:Add Routes here*/
+$(para).html(getRoutes(data.specializedRoutes));
+info_center_div_child.appendChild(para);
+info_center_div.appendChild(info_center_div_child);
+}
+if(data.companyDetails.hasOwnProperty('website')) {
+info_center_div_child = document.createElement('div');
+$(info_center_div_child).addClass('form-group');
+
+label = document.createElement('label');
+$(label).addClass('website_label');
+$(label).text('Website');
+info_center_div_child.appendChild(label);
+var para = document.createElement('p');
+/*DATA_INSERT:Add Website here*/
+$(para).html(getWebsite(data.companyDetails.website));
+//        $(para).html(getWebsite('www.slshub.in'));
+info_center_div_child.appendChild(para);
+info_center_div.appendChild(info_center_div_child);
+}
+/*center div ends*/
+main_panel.appendChild(info_center_div);
+/*right div starts*/
+var info_right_div = document.createElement('div');
+$(info_right_div).addClass('col-md-4');
+$(info_right_div).addClass('info_right')
+var info_right_div_child = document.createElement('div');
+if(data.companyDetails.hasOwnProperty('contactPerson')) {
+$(info_right_div_child).addClass('form-group');
+$(info_right_div_child).addClass('row');
+var icon_div = document.createElement('div');
+$(icon_div).addClass('col-md-pull-2');
+$(icon_div).addClass('material-icons');
+icon = document.createElement('i');
+$(icon).addClass('material-icons');
+$(icon).addClass('icon_style');
+$(icon).html('&#xe8a6;');
+icon_div.appendChild(icon);
+info_right_div_child.appendChild(icon_div);
+var person_div = document.createElement('div');
+$(person_div).addClass('person_name');
+$(person_div).addClass('col-md-6');
+$(person_div).addClass('col-md-offset-4');
+/*DATA_INSERT:Add names here*/
+$(person_div).html(getContactInfo(data.companyDetails.contactPerson));
+//        $(para).html(getContactInfo(['Ram Krishna Prasad','Ishan Darolia','Arihant Kumar Jain']));
+info_right_div_child.appendChild(person_div);
+
+info_right_div.appendChild(info_right_div_child);
+info_right_div.appendChild(line_break);
+}
+if(data.hasOwnProperty('mobile')) {
+// console.log('adding mobile number')
+info_right_div_child = document.createElement('div');
+$(info_right_div_child).addClass('form-group');
+$(info_right_div_child).addClass('row');
+icon_div = document.createElement('div');
+$(icon_div).addClass('col-md-pull-1');
+$(icon_div).addClass('material-icons');
+icon = document.createElement('i');
+$(icon).addClass('material-icons');
+$(icon).addClass('icon_style');
+$(icon).html('&#xe0dd;');
+icon_div.appendChild(icon);
+info_right_div_child.appendChild(icon_div);
+var mobile_div = document.createElement('div');
+$(mobile_div).addClass('person_mobile');
+$(mobile_div).addClass('col-md-6');
+$(mobile_div).addClass('col-md-offset-4');
+/*DATA_INSERT:Add mobile numbers here*/
+$(mobile_div).html(getContactInfo(data.mobile));
+info_right_div_child.appendChild(mobile_div);
+info_right_div.appendChild(info_right_div_child);
+info_right_div.appendChild(line_break);
+}
+if(data.companyDetails.hasOwnProperty('email')) {
+info_right_div_child = document.createElement('div');
+$(info_right_div_child).addClass('form-group');
+$(info_right_div_child).addClass('row');
+icon_div = document.createElement('div');
+$(icon_div).addClass('col-md-pull-1');
+$(icon_div).addClass('material-icons');
+icon = document.createElement('i');
+$(icon).addClass('material-icons');
+$(icon).addClass('icon_style');
+$(icon).html('&#xe8a6;');
+icon_div.appendChild(icon);
+info_right_div_child.appendChild(icon_div);
+para = document.createElement('p');
+$(para).addClass('person_mail');
+$(para).addClass('col-md-6');
+$(para).addClass('col-md-offset-4');
+/*DATA_INSERT:Add email here*/
+$(para).html(getEmail(data.companyDetails.email));
+//        $(para).html(getEmail('anj.2403@gmail.com') + '<i class="material-icons">&#xe0be;</i>');
+info_right_div_child.appendChild(para);
+info_right_div.appendChild(info_right_div_child);
+}
+/*right div ends*/
+main_panel.appendChild(info_right_div);
+var main_panel_parent = document.createElement('div');
+$(main_panel_parent).addClass('data_row_wrapper');
+main_panel_parent.appendChild(main_panel);
+container.appendChild(main_panel_parent);
+
+}
+
+function show_data(list,loading_type) {
+console.log('in show_data, loading type = ' + loading_type);
+if(list.hits.hits.length == 0){
+stop_fetching = true;
+if(loading_type == 'active' && !alert_shown){
+alert_shown = true;
+alert('Sorry, We could not find any Transporter with the given search parameters.');
+
+}
+return;
+}
+for(var i=0; i< list.hits.hits.length; i++){
+gen_row(list.hits.hits[i]._source);
+offset++;
+}
+console.log('offset = '+ offset);
+if(loading_type == 'active'){
+init_paginate();
+showPage();
+}
+else if(loading_type == 'lazy'){
+add_pages(list.hits.hits.length);
+}
+$('[data-toggle="popover"]').popover();
+if(list.hits.hits.length < fetch_size){
+stop_fetching = true;
+console.log('stop_fetching = true');
+//        if(loading_type == 'active' && !alert_shown){
+//          alert_shown = true;
+//          alert('All data fetched');
+//
+//        }
+return;
+}
+stop_fetching = false;
+}
+
+
+
+/*city state autofill start*/
+
+
+var source_city;
+var placeSearch,autocomplete1,autocomplete2;
+var autocomplete1_flag = false;
+var autocomplete2_flag = false;
+var componentForm1 = {
+locality: 'long_name',
+administrative_area_level_1: 'long_name'
+};
+var componentForm2 = {
+administrative_area_level_1: 'long_name'
+};
+var inputMap = {
+locality: 'src_city',
+administrative_area_level_1: 'src'
+};
+function initAutocomplete(){
+//console.log("inside autocomplete");
+var input1 = document.getElementById('src');
+var input2 = document.getElementById('dest');
+var options = {
+types: ['geocode'],
+componentRestrictions: {country: 'in'}
+};
+autocomplete1 = new google.maps.places.Autocomplete(
+input1,options
+);
+autocomplete2 = new google.maps.places.Autocomplete(
+input2,options
+);
+autocomplete1.addListener('place_changed', fillInAddress1);
+autocomplete2.addListener('place_changed', fillInAddress2);
+//console.log("outside autocompletee");
+}
+function fillInAddress1(){
+source_city = '';
+source_state = '';
+//$('#registerButton').attr("disabled","true");
+autocomplete1_flag = false;
+// console.log("fillInAddress called autocomplete_flag = " + autocomplete1_flag);
+var place = autocomplete1.getPlace();
+//    for (var component in componentForm) {
+//      document.getElementById(inputMap[component]).value = '';
+//      //document.getElementById(inputMap[component]).disabled = false;
+//    }
+$('#src').val('');
+var city_state_value = '';
+for (var i = 0; i < place.address_components.length; i++) {
+var addressType = place.address_components[i].types[0];
+// console.log(place.address_components[i]);
+if (componentForm1[addressType]) {
+var val = place.address_components[i][componentForm1[addressType]];
+if(addressType == 'locality') {
+source_city = val;
+console.log('source city = '+ source_city);
+}
+else{
+source_state = val;
+}
+}
+if(source_city != '')
+document.getElementById('src').value = source_city+', '+source_state;
+else
+document.getElementById('src').value = source_state;
+}
+autocomplete1_flag = true;
+console.log("fillInAddress completed autocomplete_flag = " + autocomplete1_flag);
+//$('#registerButton').removeAttr("disabled");
+
+}
+function fillInAddress2(){
+//$('#registerButton').attr("disabled","true");
+autocomplete2_flag = false;
+//console.log("fillInAddress called autocomplete_flag = " + autocomplete_flag);
+var place = autocomplete2.getPlace();
+//    for (var component in componentForm) {
+//      document.getElementById(inputMap[component]).value = '';
+//      //document.getElementById(inputMap[component]).disabled = false;
+//    }
+$('#dest').val('');
+for (var i = 0; i < place.address_components.length; i++) {
+var addressType = place.address_components[i].types[0];
+if (componentForm2[addressType]) {
+var val = place.address_components[i][componentForm2[addressType]];
+document.getElementById('dest').value = val;
+}
+}
+autocomplete2_flag = true;
+//console.log("fillInAddress completed autocomplete_flag = " + autocomplete_flag);
+//$('#registerButton').removeAttr("disabled");
+
+}
+function getCurrentAddress(address){
+var current_address = '';
+var current_city = '';
+var current_state = '';
+
+for (var i = 0; i < address.address_components.length; i++) {
+var addressType = address.address_components[i].types[0];
+if(addressType == 'locality'){
+current_city = address.address_components[i]['long_name'];
+}
+else if(addressType == 'administrative_area_level_1'){
+current_state = address.address_components[i]['long_name'];
+}
+}
+current_address = current_city +', '+ current_state;
+$('#src').val(current_address);
+autocomplete1_flag = true;
+console.log(current_city + current_state);
+}
+function geolocate() {
+console.log("called");
+if (navigator.geolocation) {
+
+
+console.log('permission  granted');
+navigator.geolocation.getCurrentPosition(function(position) {
+console.log('inside');
+var geocoder = new google.maps.Geocoder();
+var lat = position.coords.latitude;
+var lng = position.coords.longitude;
+var geolocation = {
+lat: lat,
+lng: lng
+};
+var latlng = new google.maps.LatLng(lat, lng);
+geocoder.geocode({
+'latLng': latlng
+}, function (results, status) {
+if (status === google.maps.GeocoderStatus.OK) {
+if (results[1]) {
+console.log(results[1]);
+getCurrentAddress(results[1]);
+} else {
+alert('No results found');
+}
+} else {
+console.log('Geocoder failed due to: ' + status);
+}
+});
+//        console.log(geolocation);
+var circle = new google.maps.Circle({
+center: geolocation,
+radius: position.coords.accuracy
+});
+autocomplete1.setBounds(circle.getBounds());
+autocomplete2.setBounds(circle.getBounds());
+});
+}
+else{
+console.log('permission not granted');
+}
+}
+$( "#src" ).change(function() {
+//console.log( "Handler for .change() called." );
+autocomplete1_flag = false;
+});
+$( "#dest" ).change(function() {
+//console.log( "Handler for .change() called." );
+autocomplete2_flag = false;
+});
+$(document.body).on('click', '.pagination li.numeros', function(){
+if (parseInt($(this).text()) == currentPage){
+return;
+}
+console.log('clicked numeros' + $(this));
+$(".pagination li").removeClass("active");
+$(this).addClass("active");
+currentPage = parseInt($(this).text());
+console.log('current page = ' + currentPage);
+console.log('stop fetching =' + stop_fetching);
+if(!stop_fetching && (totalPages - currentPage < 3)){
+loadMoreData();
+}
+//    else if((currentPage == totalPages) && stop_fetching && !alert_shown){
+//      alert_shown = true;
+//      alert('all transporters have been listed');
+//    }
+
+
+showPage();
+});
+
+$(document.body).on('click', '.pagination li.pag_prev', function() {
+if($(this).next().is('.active')) return;
+$('.numeros.active').removeClass('active').prev().addClass('active');
+currentPage = currentPage > 1 ? (currentPage-1) : 1;
+showPage();
+});
+
+$(document.body).on('click','.pagination li.pag_next',function() {
+if($(this).prev().is('.active')){
+return;
+}
+$('.numeros.active').removeClass('active').next().addClass('active');
+currentPage = currentPage < totalPages ? (currentPage+1) : totalPages;
+showPage();
+console.log('current_page = '+currentPage);
+console.log('total_page = '+ totalPages);
+if(!stop_fetching && totalPages - currentPage < 3){
+loadMoreData();
+}
+//    else if(currentPage == totalPages && stop_fetching && !alert_shown){
+//      alert_shown = true;
+//      alert('all transporters have been listed');
+//    }
+
+});
+</script>
+</body>
+</html>
