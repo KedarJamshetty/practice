@@ -1,0 +1,46 @@
+import React from 'react';
+import Text from './Text';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
+
+
+class Layout extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      users : []
+    }
+  }
+
+  componentDidMount(){
+    $.ajax({
+      url:'http://jsonplaceholder.typicode.com/users',
+      success : function(data){
+          this.setState({
+            users : data
+          });
+      }.bind(this)
+    })
+  }
+
+  render(){
+    const { users } = this.state;
+    return(
+    	<div>
+    		<Text/>	
+		      <ul>
+		        {
+		          users.map((user) => {
+		            return <div key={user.id}>
+		            { user.name}
+		            </div>
+		          })
+		        }
+		      </ul>
+        </div>
+    );
+  }
+}
+
+
+export default Layout;
