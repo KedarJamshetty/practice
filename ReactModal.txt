@@ -1,0 +1,38 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
+import Modal from 'react-modal'
+
+export default class Layout extends React.Component {
+  constructor(){
+    super();
+    this.state ={
+      isActive : false
+    }
+
+  }
+
+  componentWillMount(){
+    Modal.setAppElement('body');
+  }
+
+  toggleModal =() =>{
+    this.setState({
+      isActive : !this.state.isActive
+    });
+  }
+
+  render(){
+    return(
+      <section>
+        <button className="btn btn-primary" onClick={this.toggleModal}>Show Modal</button>
+        <Modal isOpen={this.state.isActive}>
+          Hello From Modal
+        </Modal>
+      </section>
+      )
+  }
+}  
+    
+
+
